@@ -26,3 +26,14 @@ fun tax_cal(price:Int):Int{
 }
 
 //関数は値　サンプルソース
+fun List2_21(){
+    val list2 = arrayOf(1000,2500,4780)
+    val totalA = list2[0] + list2[1] + list2[2]
+    val totalB = tax_cal2(list2[0])+ tax_cal2(list2[1]) + tax_cal2(list2[2])
+    println("total: " + totalA + ", with Tax: " +totalB)
+    println(tax_cal2)
+}
+
+val tax_cal2 = fun(price:Int):Int{
+    return (price * 1.1).toInt()
+}
