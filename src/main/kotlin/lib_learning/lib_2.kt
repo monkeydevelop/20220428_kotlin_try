@@ -51,5 +51,23 @@ fun List2_22(){
 }
 
 fun tax_cal3(price:Int, rate:Int = 10):Int{
-    return (price *((100.0 +rate) / 100.0)).toInt()
+    return (price *((100.00 +rate) / 100.00)).toInt()
+}
+
+//ローカル関数
+fun List2_23(){
+    println("List2_23:ローカル関数")
+    val price = 12500
+    tax_cal4(price)
+    tax_cal4(price,15)
+    tax_cal4(rate=20,price=price)
+
+}
+
+fun tax_cal4(price:Int,rate:Int = 10){
+    val p = (price*((100.00+rate)/100.00)).toInt()
+    fun printTax(){
+        println("*" +rate + "%: " +p)
+    }
+    printTax()
 }
